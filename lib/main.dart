@@ -1,3 +1,4 @@
+import 'package:FixNow/dummy.dart';
 import 'package:FixNow/firebase_options.dart';
 import 'package:FixNow/home.dart';
 import 'package:FixNow/user_profile.dart';
@@ -262,11 +263,13 @@ Future<void> signIn(String email, String password, BuildContext context) async {
       email: email,
       password: password,
     );
+
+    
     // On success, navigate to the next page (e.g., bookings or dashboard)
     Navigator.push(
       context,
       MaterialPageRoute(
-    builder: (context) => HomePage(userId: globalUserId!),
+    builder: (context) => Dummy(),
     ));
   } catch (e) {
     // Handle errors (e.g., wrong credentials or user not found)
